@@ -8,3 +8,27 @@ AIR CONDITIONER - VPD
 HUMIDIFIER - VPD
 DEHUMIDIFIER - VPD
 CO2 - MHZ-14/VPD CALCULATE
+
+--------------
+
+data output to look like the following:    (every X seconds/minutes/hours/days/weeks/months)
+FOR EVERY AIM RECORDED, HAVE MATCHING ACTUAL DATA
+
+DAY XX = DEFINE DAY/ROLE/ETC... XX
+AIM/ACTUAL Water Temp:      XXX
+AIM/ACTUAL Water pH:        XXX
+///////////////////////////////////////////////////////////AIM Water EC:        XXX
+AIM/ACTUAL VPD:             XXX (TEMP/HUMIDITY/LEAFTEMP)
+AIM/ACTUAL Envir CO2 (ppm): XXX
+AIM/ACTUAL Envir LUX / UVB: XXX / XXX
+AIM/ACTUAL Envir Wind/Psi:  XXX
+AIM/ACTUAL Root Temp:       5-10°F LOWER THAN ENVIRO/CANPOY TEMP
+AIM/ACTUAL Nutrients:                  1) XXX
+                                2) XXX
+                                X) XXX
+                                 Always add feed first, then adjust pH to around 5.5 - 6.5
+AIM/ACTUAL NUTRIENTS - http://blog.onestopgrowshop.co.uk/2013/08/control-of-nutrient-strength-levels-in-hydroponics/
+AIM/ACTUAL NUTRIENTS - https://www.onestopgrowshop.co.uk/spree/product_files/7510/original/House_and_garden_Hydro.pdf?1541497829
+AIM/ACTUAL PostNutrient pH: XXX
+AIM/ACTUAL PostNutrien EC:  XXX
+AIM/ACTUAL RUN OFF %:       XXX // Optimum 20 – 30% run off - work a way to figrue this out
