@@ -2,9 +2,14 @@
 ->It has been tested using a NodeMCU ESP8266, an Arduno MEGA and a DHT11 and has been noted to yield successful results.
 ->It is suspected that the HUZZAH feather has different configurations than the NodeMCU, hence the code needs to be tested again in the UK.
 
-STEPS
+STEPS:-
 
-->Begin by opening the MEGA code folder, copy the code and paste it in the Arduino IDE, go to tools and selct the board (Mega) and port,
-  and upload it to your arduino.
+->Begin by opening the DevelopmentArena/InputsAndSensors/CommunicationHuzzahMega/code file (on github), copy the code and paste it in the
+  Arduino IDE, go to tools and select the board (Mega) and port and upload it to your arduino.
 ->If you haven't already conneected your DHT with your Arduino this might be a good time to do this. Open the serial monitor to check if 
-  temp and humidity data is being read.
+  temp and humidity data is being read. If it works, proceed to the following steps, if it doesn't troubleshoot.
+->Connect your ESP8266 directly to your Laptop, and open the DevelopmentArena/InputsAndSensors/ESP/code (on Github), opy the code and paste
+  it in the Arduino IDE, go to tools and select the board (HUZZAH) and port and upload it to your ESP8266.
+  ->Connect Rx of the HUZZAH to Tx of Arduino and vice-versa (N.B [Tx to Rx] and [Rx to Tx])
+  ->Open the Serial monitor from the same window you used to upload the code to the HUZZAH ESP8266, set the baud rate correctly.
+  -> If you can see results then the whole thing works. simple. as. that.
