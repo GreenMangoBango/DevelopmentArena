@@ -1,0 +1,10 @@
+->This test creates a serial channel Serial1 to exchange data between the ESP8266.
+->It has been tested using a NodeMCU ESP8266, an Arduno MEGA and a DHT11 and has been noted to yield successful results.
+->It is suspected that the HUZZAH feather has different configurations than the NodeMCU, hence the code needs to be tested again in the UK.
+
+STEPS
+
+->Begin by opening the MEGA code folder, copy the code and paste it in the Arduino IDE, go to tools and selct the board (Mega) and port,
+  and upload it to your arduino.
+->If you haven't already conneected your DHT with your Arduino this might be a good time to do this. Open the serial monitor to check if 
+  temp and humidity data is being read.
