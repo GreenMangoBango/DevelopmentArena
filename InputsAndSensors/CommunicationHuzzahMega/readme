@@ -4,12 +4,12 @@
 
 STEPS:-
 
-->Begin by opening the DevelopmentArena/InputsAndSensors/CommunicationHuzzahMega/code file (on github), copy the code and paste it in the
+->Begin by opening the DevelopmentArena/InputsAndSensors/CommunicationHuzzahMega/ArdMEGA file (on github), copy the code and paste it in the
   Arduino IDE, go to tools and select the board (Mega) and port and upload it to your arduino.
 ->If you haven't already conneected your DHT with your Arduino this might be a good time to do this. Open the serial monitor to check if 
   temp and humidity data is being read. If it works, proceed to the following steps, if it doesn't troubleshoot.
-->Connect your ESP8266 directly to your Laptop, and open the DevelopmentArena/InputsAndSensors/ESP/code (on Github), opy the code and paste
+->Connect your ESP8266 directly to your Laptop, and open the DevelopmentArena/InputsAndSensors/CommunicationHuzzahMega/ESP (on Github), opy the code and paste
   it in the Arduino IDE, go to tools and select the board (HUZZAH) and port and upload it to your ESP8266.
-  ->Connect Rx of the HUZZAH to Tx of Arduino and vice-versa (N.B [Tx to Rx] and [Rx to Tx])
+  ->Connect Rx of the HUZZAH to Tx of Arduino and vice-versa (N.B [Tx to Rx] and [Rx to Tx]) and ground to ground.
   ->Open the Serial monitor from the same window you used to upload the code to the HUZZAH ESP8266, set the baud rate correctly.
   -> If you can see results then the whole thing works. simple. as. that.
