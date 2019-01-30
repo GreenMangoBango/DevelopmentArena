@@ -1,0 +1,22 @@
+This sub-folder contains files that successfully create a seamless line ofcommunication following this path: 
+DHT --> Arduino --> ESP8266 --> ThingSpeak.
+
+Please follow these steps attentively:
+
+1) follow this link, and click the green button labelled "clone or download", then click "Download ZIP".
+
+2) Go to the arduino IDE taskbar -> sketch -> include library -> add .ZIP library, then browse to find the library you just downloaded
+  from github. The green (I think, but it could be anything cause i'm colorblind) status bar at the bottom should say "library successfully
+  added or something similar.
+  
+  
+3) Connect the DHT to the arduino. N.B: the signal pin of the DHT should be connected to digital pin 2 on the arduino. Wait until codes 
+  are uploaded to connect the wifi module with the arduino.
+  
+4) Go the DevelopmentArena/ PoC/OneLineAttempt1.0/Arduino, copy and paste the code in the IDE, set the port and COM to the Arduino Mega
+  and upload the code. N.B: You should put your own SSID and password.
+  
+ 5) Go to DevelopmentArena/ PoC/OneLineAttempt1.0/Arduino, copy and paste the code in the IDE,set the port and COM to whichever ESP you're 
+    using and upload the code.
+    
+ 
