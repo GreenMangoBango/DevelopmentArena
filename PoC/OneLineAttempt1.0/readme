@@ -4,6 +4,7 @@ DHT --> Arduino --> ESP8266 --> ThingSpeak.
 Please follow these steps attentively:
 
 1) follow this link, and click the green button labelled "clone or download", then click "Download ZIP".
+   https://github.com/mathworks/thingspeak-arduino
 
 2) Go to the arduino IDE taskbar -> sketch -> include library -> add .ZIP library, then browse to find the library you just downloaded
   from github. The green (I think, but it could be anything cause i'm colorblind) status bar at the bottom should say "library successfully
