@@ -1,0 +1,94 @@
+#include <ThingSpeak.h>
+#include <WiFiClient.h>
+#include <ESP8266WiFi.h>
+ 
+const char* ssid     = "/*!!!!!Please insert your ssid here!!!!!!!*/";
+const char* password = "/*!!!!Please insert Password here!!!!!!*/";
+WiFiClient client;
+
+const char* host = "api.thingspeak.com";
+unsigned long myChannelNumber = 680519;
+const char * myWriteAPIKey = "WFFN3HLDRB5DE9ES"; 
+
+int Intrcpt, Intrcpt1, Intrcpt2;
+int TempToSend, HumidToSend;
+bool TempCrab = false;
+bool HumidCrab = false;
+bool TempClear = false;
+bool HumidClear = false;
+char Hj[2];
+ 
+
+void setup() {
+  Serial.begin(115200);
+  delay(100);
+ 
+  // We start by connecting to a WiFi network
+ 
+  Serial.println();
+  Serial.println();
+  Serial.print("Connecting to ");
+  Serial.println(ssid);
+  
+  WiFi.begin(ssid, password);
+  
+  while (WiFi.status() != WL_CONNECTED) {
+    delay(500);
+    Serial.print(".");
+  }
+ 
+  Serial.println("");
+  Serial.println("WiFi connected");  
+  Serial.println("IP address: ");
+  Serial.println(WiFi.localIP());
+  ThingSpeak.begin(client); 
+  
+}
+
+void loop() { // run over and over
+
+  
+  if (Serial.available()) {
+   Intrcpt = Serial.read();
+  // Serial.println(Intrcpt);
+  }
+  switch (Intrcpt) {
+    case 240:
+     TempCrab = true;
+     HumidCrab = false;
+      break;
+    case 250:
+     HumidCrab = true;
+     TempCrab = false;
+      break;
+    default:
+    if(TempCrab)
+    {
+     TempToSend = Intrcpt;
+     TempClear = true;
+    }
+    if(HumidCrab)
+    {
+     HumidToSend = Intrcpt;
+     HumidClear = true;
+    }
+      break;
+  }
+if(HumidClear && TempClear)
+{
+ Serial.print("Temperature is ");
+ Serial.println(TempToSend);
+ ThingSpeak.writeField(myChannelNumber, 3, TempToSend, myWriteAPIKey);
+ delay(15000);
+Serial.print("Humidity is ");
+ Serial.println(HumidToSend);
+ ThingSpeak.writeField(myChannelNumber, 4, HumidToSend, myWriteAPIKey);
+ delay(15000);
+ Serial.println(" ");
+ HumidClear = false;
+ TempClear = false;
+}
+
+}
+
+//int TempToSend, HumidToSend;
