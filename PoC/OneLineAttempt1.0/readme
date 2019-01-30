@@ -14,9 +14,9 @@ Please follow these steps attentively:
   are uploaded to connect the wifi module with the arduino.
   
 4) Go the DevelopmentArena/ PoC/OneLineAttempt1.0/Arduino, copy and paste the code in the IDE, set the port and COM to the Arduino Mega
-  and upload the code. N.B: You should put your own SSID and password.
+  and upload the code. N.B: You should uncomment the define that corresponds to the DHT you're using
   
  5) Go to DevelopmentArena/ PoC/OneLineAttempt1.0/Arduino, copy and paste the code in the IDE,set the port and COM to whichever ESP you're 
-    using and upload the code.
+    using and upload the code.  N.B: You should put your own SSID and password.
     
  
